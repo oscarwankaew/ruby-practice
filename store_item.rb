@@ -65,3 +65,26 @@ edible1 = Food.new({name: "Bannana", price: 1.59, shelf_life: "3 days"})
 edible2 = Food.new({name: "Milk", price: 1.59, shelf_life: "3 days"})
 edible1.info
 edible2.info
+
+puts "[C]reate [R]ead [U]date [D]elete [Q]uit: "
+input = gets.chomp
+if input == d
+    puts "Delete item"
+    puts "Item id: "
+    item_id = gets.chomp
+elsif input == r
+    puts "Item id: "
+    item_id = gets.chomp
+elsif input == c
+    puts "Item name: "
+    name = gets.chomp
+    puts "Item color: "
+    color = gets.chomp
+    puts "Item price: "
+    price = gets.chomp
+elsif input == u
+    puts "Item id: "
+    item_id = gets.chomp
+    puts "Update item expiration: "
+elsif input == q
+end    
