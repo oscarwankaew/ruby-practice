@@ -25,6 +25,10 @@ class Items
     def price
         return @price
     end
+    def tax
+        return @price * 1.04
+    end
+
 end
 
 item1 = Items.new({name: "Hot wheel", color: "Black", price: 7.99})
@@ -40,3 +44,4 @@ item3.name = "Shoes"
 p item3
 item1.color = "White"
 p item1
+p item1.tax
