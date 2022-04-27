@@ -45,3 +45,23 @@ p item3
 item1.color = "White"
 p item1
 p item1.tax
+
+class Food < Items
+
+    def initialize(input_options)
+        super
+      @shelf_life = input_options[:shelf_life]
+    end
+    def shelf_life
+        return @shelf_life
+    end
+    def info
+        puts "#{name} is #{price} and it expires #{shelf_life}"
+    end
+
+end
+
+edible1 = Food.new({name: "Bannana", color: "Yellow", price: 1.59, shelf_life: "3 days"})
+edible2 = Food.new({name: "Milk", color: "Yellow", price: 1.59, shelf_life: "3 days"})
+edible1.info
+edible2.info
