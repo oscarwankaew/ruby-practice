@@ -6,18 +6,18 @@ puts "#{item1["type"]} with color #{item1["color"]} costs #{item1["price"]}"
 
 
 class Items
-    attr_accessor :item, :color, :price
+    attr_accessor :name, :color, :price
 
     def initialize(input_options)
-        @item = input_options[:item]
+        @name = input_options[:name]
         @color = input_options[:color]
         @price = input_options[:price]
     end
     def info
-        puts "#{item} has color #{color} and it costs #{price}."
+        puts "#{name} has color #{color} and it costs #{price}."
     end
-    def item
-        return @item
+    def name
+        return @name
     end
     def color 
         return @color
@@ -27,16 +27,16 @@ class Items
     end
 end
 
-item1 = Items.new({item: "Hot wheel", color: "Black", price: 7.99})
-item2 = Items.new({item: "Soccer ball", color: "Red", price: 9.99})
-item3 = Items.new({item: "Baseball bat", color: "Yellow", price: 35.99})
+item1 = Items.new({name: "Hot wheel", color: "Black", price: 7.99})
+item2 = Items.new({name: "Soccer ball", color: "Red", price: 9.99})
+item3 = Items.new({name: "Baseball bat", color: "Yellow", price: 35.99})
 item1.info
 item2.info
 item3.info
-p item1.item
+p item1.name
 p item2.color
 p item3.price
-item3.item = "Shoes"
+item3.name = "Shoes"
 p item3
 item1.color = "White"
 p item1
