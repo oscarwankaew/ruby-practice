@@ -61,7 +61,7 @@ class Food < Items
 
 end
 
-edible1 = Food.new({name: "Bannana", color: "Yellow", price: 1.59, shelf_life: "3 days"})
-edible2 = Food.new({name: "Milk", color: "Yellow", price: 1.59, shelf_life: "3 days"})
+edible1 = Food.new({name: "Bannana", price: 1.59, shelf_life: "3 days"})
+edible2 = Food.new({name: "Milk", price: 1.59, shelf_life: "3 days"})
 edible1.info
 edible2.info
