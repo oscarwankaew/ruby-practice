@@ -23,7 +23,7 @@ class Employee
   employee1.print_info
   employee2.print_info
   
-  class Manager < Employee
+class Manager < Employee
     def initialize(input_options)
       super
       @employees = input_options[:employees]
@@ -34,19 +34,25 @@ class Employee
       # use email sending library...
       puts "Email sent!"
     end
-    def give_annual_raise
-        index = 0
-        while index < Employee.length
-            give_annual_raise = Employee[index][:salary] * 1.05
-            index += 1
+
+    def give_all_raise
+        @employees.each do |employee|
+            employee.give_annual_raise
         end
     end
-        
-  end
+
+    def fire_all_employees
+        @employees.each do |employee|
+            employee.active = false
+        end 
+    end
+
+end
   
-  manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-  manager.print_info
-  manager.send_report
-  p employee1.give_annual_raise
-  p employee2.give_annual_raise
- 
+manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
+manager.print_info
+manager.send_report
+manager.give_all_raise
+p employee1
+manager.fire_all_employees
+p employee2
