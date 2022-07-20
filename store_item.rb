@@ -28,10 +28,10 @@ end
 
 module Perishable
 
-    def initialize(input_options)
-        super
-      @shelf_life = input_options[:shelf_life]
-    end
+    # def initialize(input_options)
+    #     super
+    #   @shelf_life = input_options[:shelf_life]
+    # end               "this doesn't work in requiring!!"
     def shelf_life
         return @shelf_life
     end
@@ -68,9 +68,14 @@ p item1
 p item1.tax
 
 class Food < Item
-
     include Perishable
     include Itemidable
+
+    def initialize(input_options)
+        super
+      @shelf_life = input_options[:shelf_life]
+    end
+
 end
 
 edible1 = Food.new({name: "Bannana", price: 1.59, shelf_life: "3 days"})

@@ -1,7 +1,7 @@
 require './item-class.rb'
 require './food-class.rb'
 require './itemidable.rb'
-
+require './perishable.rb'
 
 item1 = Item.new({name: "Hot wheel", color: "Black", price: 7.99})
 item2 = Item.new({name: "Soccer ball", color: "Red", price: 9.99})
