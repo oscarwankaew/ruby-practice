@@ -30,3 +30,17 @@ while index < arr_work.length - 1
   index += 1
 end
 puts "#{minsum} #{maxsum}"
+
+def birthdayCakeCandles(candles) #this code passes all cases
+  sorted = candles.sort
+  tallest = candles.max
+  qaunity = 0
+  index = 0
+  while index < sorted.length
+    if sorted[index] == tallest
+      qaunity += 1
+    end
+    index += 1
+  end
+  p qaunity
+end
