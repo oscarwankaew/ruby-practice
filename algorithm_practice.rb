@@ -44,3 +44,7 @@ def birthdayCakeCandles(candles) #this code passes all cases
   end
   p qaunity
 end
+
+#converting giving time in a string to military time
+require "time"
+p Time.parse("9:03 pm").strftime("%H:%M:%S")
